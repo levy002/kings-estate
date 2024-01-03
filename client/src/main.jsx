@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
      domain="dev-omjwupug7w2kbo8z.us.auth0.com"
      clientId="lUEh3ru7rCG7yjzUPd2eLXu9YuPgxGTS"
      authorizationParams={{
-      redirect_uri: "https://kings-estate.vercel.app"
+      redirect_uri: "https://kings-estate.vercel.app/"
      }}
      audience="https://kings-real-estate-agency/"
      scope="openid profile email"
