@@ -1,5 +1,5 @@
 import { Container, Modal, Stepper } from "@mantine/core";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AddLocation from "../AddLocation/AddLocation";
 import { useAuth0 } from "@auth0/auth0-react";
 import UploadImage from "../UploadImage/UploadImage";
