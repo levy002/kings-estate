@@ -173,11 +173,6 @@ export const createResidency = async (data, token) => {
       `/residency/create`,
       {
         data
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
       }
     );
   }catch(error)
