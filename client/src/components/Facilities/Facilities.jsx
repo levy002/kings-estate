@@ -45,8 +45,6 @@ const Facilities = ({
   const { user } = useAuth0();
   const { userDetails: { token }, } = useContext(UserDetailContext);
 
-console.log(userDetails, 'token')
-
   const { refetch: refetchProperties } = useProperties();
 
   const {mutate, isLoading} = useMutation({
@@ -78,6 +76,9 @@ console.log(userDetails, 'token')
 
   })
 
+
+  console.log(token, 'tokennnn');
+  
   return (
     <Box maw="30%" mx="auto" my="sm">
       <form
