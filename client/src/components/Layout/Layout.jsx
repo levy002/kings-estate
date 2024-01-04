@@ -27,7 +27,7 @@ const Layout = () => {
 
       const res = await getAccessTokenWithPopup({
         authorizationParams: {
-          audience: "http://localhost:8000",
+          audience: "https://kings-estate-ib2g.vercel.app",
           scope: "openid profile email",
         },
       });
