@@ -42,9 +42,10 @@ const Facilities = ({
 
   // ==================== upload logic
   const { user } = useAuth0();
-  const {
-    userDetails: { token },
-  } = useContext(UserDetailContext);
+  const { userDetails: { token }, } = useContext(UserDetailContext);
+
+console.log(token, 'token')
+
   const { refetch: refetchProperties } = useProperties();
 
   const {mutate, isLoading} = useMutation({
