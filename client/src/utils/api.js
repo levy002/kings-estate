@@ -179,7 +179,7 @@ export const createResidency = async (data, token) => {
           Authorization: `Bearer ${token}`,
         },
       }
-    )
+    );
   }catch(error)
   {
     throw error
