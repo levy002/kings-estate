@@ -8,7 +8,7 @@ import Facilities from "../Facilities/Facilities";
 
 const AddPropertyModal = ({ opened, setOpened }) => {
   const [active, setActive] = useState(0);
-  const { user } = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
 
   console.log(user, 'user', user?.name, user?.email)
 
@@ -25,8 +25,17 @@ const AddPropertyModal = ({ opened, setOpened }) => {
       parkings: 0,
       bathrooms: 0,
     },
-    userEmail: user?.email,
+    userEmail: user?.email || "",
   });
+
+  useEffect(() => {
+    if (isAuthenticated && user) {
+      setPropertyDetails((prevDetails) => ({
+        ...prevDetails,
+        userEmail: user.email,
+      }));
+    }
+  }, [isAuthenticated, user]);
 
   console.log(propertyDetails, 'details')
 
