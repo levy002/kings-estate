@@ -41,10 +41,11 @@ const Facilities = ({
   };
 
   // ==================== upload logic
+
   const { user } = useAuth0();
   const { userDetails: { token }, } = useContext(UserDetailContext);
 
-console.log(token, 'token')
+console.log(userDetails, 'token')
 
   const { refetch: refetchProperties } = useProperties();
 
